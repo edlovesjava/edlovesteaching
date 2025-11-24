@@ -1,0 +1,7 @@
+import client from './client';
+import { Category } from '../types/article';
+
+export const getCategories = async (): Promise<Category[]> => {
+  const response = await client.get('/categories');
+  return response.data;
+};
