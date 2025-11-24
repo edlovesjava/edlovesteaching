@@ -1,5 +1,5 @@
 import client from './client';
-import { Article, PagedResponse } from '../types/article';
+import type { Article, PagedResponse } from '../types/article';
 
 export const getArticles = async (page = 0, size = 10): Promise<PagedResponse<Article[]>> => {
   const response = await client.get(`/articles?page=${page}&size=${size}`);
